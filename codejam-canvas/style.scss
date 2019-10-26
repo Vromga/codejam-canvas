@@ -1,0 +1,48 @@
+%grid {
+  display: grid;
+}
+
+%flex{
+  display: flex;
+}
+
+//*********Variables***********
+$icon_color: #757575;
+
+//*********Styles**************
+* {
+  box-sizing: content-box;
+}
+
+body {
+  @extend %grid;
+  justify-items: center;
+}
+
+.app_body {
+  width: 1440px;
+  max-width: 100%;
+  min-width: 600px;
+  min-height: 900px;
+
+  .header {
+    @extend %flex;
+    justify-content: flex-start;
+    grid-template: 5% 90% 5% / 1fr;
+    width: 100%;
+    min-height: 48px;
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+    &--burger_menu{
+      margin: 0;
+    }
+    &--h1{
+      margin: 0;
+      flex-grow: 1;
+    }
+    &--three_point{
+      margin: 0;
+    }
+  }
+
+}

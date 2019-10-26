@@ -1,0 +1,42 @@
+body {
+  display: grid;
+}
+
+.app_body .header {
+  display: flex;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+body {
+  justify-items: center;
+}
+
+.app_body {
+  width: 1440px;
+  max-width: 100%;
+  min-width: 600px;
+  min-height: 900px;
+}
+.app_body .header {
+  justify-content: flex-start;
+  grid-template: 5% 90% 5%/1fr;
+  width: 100%;
+  min-height: 48px;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+}
+.app_body .header--burger_menu {
+  margin: 0;
+}
+.app_body .header--h1 {
+  margin: 0;
+  flex-grow: 1;
+}
+.app_body .header--three_point {
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
