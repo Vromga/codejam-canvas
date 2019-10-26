@@ -1,4 +1,4 @@
-body {
+.app_body .main, body {
   display: grid;
 }
 
@@ -27,7 +27,6 @@ body {
 }
 .app_body .header {
   justify-content: flex-start;
-  grid-template: 5% 90% 5%/1fr;
   width: 100%;
   min-height: 48px;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
@@ -46,6 +45,17 @@ body {
 }
 .app_body .header--three_point {
   margin: 0;
+}
+.app_body .main {
+  grid-template: 10% 90%/50% 50%;
+}
+.app_body .main .tools {
+  position: absolute;
+  width: 228px;
+  height: 246px;
+  border: 1px solid #e6e6e6;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
 }
 
 /*# sourceMappingURL=style.css.map */
