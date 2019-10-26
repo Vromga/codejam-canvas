@@ -2,7 +2,7 @@
   display: grid;
 }
 
-.app_body .main .color--elem, .app_body .header {
+.app_body .main .resolution--radio-label, .app_body .main .resolution--radio, .app_body .main .color--elem, .app_body .header {
   display: flex;
 }
 
@@ -111,6 +111,36 @@ body {
   grid-column: 3/4;
   grid-row: 1/2;
   font-family: "Roboto", sans-serif;
+}
+.app_body .main .resolution--title {
+  padding-left: 15px;
+}
+.app_body .main .resolution--radio {
+  padding: 15px 0 10px;
+  justify-content: center;
+}
+.app_body .main .resolution--radio-input {
+  display: none;
+}
+.app_body .main .resolution--radio-input:checked + .resolution--radio-label {
+  background-color: rgba(210, 210, 210, 0.5);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+}
+.app_body .main .resolution--radio-label {
+  justify-content: center;
+  border: 1px solid #e6e6e6;
+  width: 80%;
+}
+.app_body .main .resolution--radio-label:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+}
+.app_body .main .resolution--radio-label:active {
+  cursor: pointer;
+  -webkit-box-shadow: 0 7px 7px 3px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 7px 7px 3px rgba(0, 0, 0, 0.3), 0 0 5px rgba(0, 0, 0, 0.12);
 }
 
 /*# sourceMappingURL=style.css.map */

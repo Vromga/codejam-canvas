@@ -141,6 +141,45 @@ body {
       grid-row: 1/2;
       @extend %block;
       @include roboto();
+
+      &--title {
+        padding-left: 15px;
+      }
+
+      &--radio {
+        padding: 15px 0 10px;
+        @extend %flex;
+        justify-content: center;
+
+        &-input {
+          display: none;
+
+          &:checked + .resolution--radio-label {
+            background-color: rgba(210, 210, 210, 0.5);
+            -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+          }
+        }
+
+        &-label {
+          @extend %flex;
+          justify-content: center;
+          border: 1px solid rgba(230, 230, 230, 1);
+          width: 80%;
+
+          &:hover {
+            cursor: pointer;
+            -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+          }
+
+          &:active {
+            cursor: pointer;
+            -webkit-box-shadow: 0 7px 7px 3px rgba(0, 0, 0, 0.30), 0 0 5px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 7px 7px 3px rgba(0, 0, 0, 0.30), 0 0 5px rgba(0, 0, 0, 0.12);
+          }
+        }
+      }
     }
   }
 }
