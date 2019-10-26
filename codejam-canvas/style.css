@@ -23,6 +23,7 @@ body {
   max-width: 100%;
   min-width: 600px;
   min-height: 900px;
+  border: 1px solid #e6e6e6;
 }
 .app_body .header {
   justify-content: flex-start;
