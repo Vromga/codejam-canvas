@@ -6,6 +6,18 @@
   display: flex;
 }
 
+.app_body .main .resolution, .app_body .main .color, .app_body .main .tools {
+  width: 228px;
+  height: 246px;
+  color: rgba(0, 0, 0, 0.541327);
+  margin-left: 29px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border: 1px solid #e6e6e6;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+}
+
 * {
   box-sizing: content-box;
 }
@@ -48,22 +60,13 @@ body {
 }
 .app_body .main {
   grid-row: 1/2;
-  grid-template: 50% 50%/20% 80%;
+  grid-template: 50% 50%/20% 60% 20%;
   align-items: center;
   width: 100%;
   height: 100%;
 }
 .app_body .main .tools {
-  width: 228px;
-  height: 246px;
-  color: rgba(0, 0, 0, 0.541327);
-  margin-left: 29px;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border: 1px solid #e6e6e6;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
 }
 .app_body .main .tools--elem {
   padding: 15px 18px 10px;
@@ -73,16 +76,7 @@ body {
 }
 .app_body .main .color {
   grid-row: 2/3;
-  width: 228px;
-  height: 246px;
-  color: rgba(0, 0, 0, 0.541327);
-  margin-left: 29px;
   font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  border: 1px solid #e6e6e6;
-  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
 }
 .app_body .main .color--elem {
   padding: 15px 18px 10px;
@@ -112,6 +106,11 @@ body {
   grid-row: 1/3;
   justify-self: center;
   align-self: center;
+}
+.app_body .main .resolution {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  font-family: "Roboto", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
