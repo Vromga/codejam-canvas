@@ -6,12 +6,20 @@
   display: flex;
 }
 
+@mixin roboto(){
+  font-family: 'Roboto', sans-serif;
+}
+
 //*********Variables***********
 $icon_color: #757575;
 
 //*********Styles**************
 * {
   box-sizing: content-box;
+}
+
+html{
+  font-size: 16px;
 }
 
 body {
@@ -39,6 +47,10 @@ body {
     &--h1{
       margin: 0;
       flex-grow: 1;
+      @include roboto();
+      font-weight: 500;
+      font-size: 1.25rem;
+      line-height: 	1.4375rem;
     }
     &--three_point{
       margin: 0;

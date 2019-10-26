@@ -10,6 +10,10 @@ body {
   box-sizing: content-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   justify-items: center;
 }
@@ -34,6 +38,10 @@ body {
 .app_body .header--h1 {
   margin: 0;
   flex-grow: 1;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.4375rem;
 }
 .app_body .header--three_point {
   margin: 0;
