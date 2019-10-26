@@ -47,15 +47,26 @@ body {
   margin: 0;
 }
 .app_body .main {
-  grid-template: 10% 90%/50% 50%;
+  grid-template: 50% 50%/30% 70%;
+  width: 100%;
+  height: 100%;
 }
 .app_body .main .tools {
-  position: absolute;
   width: 228px;
   height: 246px;
+  color: rgba(0, 0, 0, 0.541327);
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
   border: 1px solid #e6e6e6;
   -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
+}
+.app_body .main .tools--elem {
+  padding: 15px 18px 10px;
+}
+.app_body .main .tools--elem-img {
+  margin-right: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
