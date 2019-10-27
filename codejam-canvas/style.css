@@ -45,10 +45,25 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.24), 0 0 4px rgba(0, 0, 0, 0.12);
 }
 .app_body .header--burger_menu {
-  margin: 0;
+  margin: 0.9rem;
+  position: relative;
+  padding-left: 1.25rem;
+}
+.app_body .header--burger_menu:hover {
+  cursor: pointer;
+}
+.app_body .header--burger_menu:before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #000;
+  border-bottom: 0.125em solid #000;
 }
 .app_body .header--h1 {
-  margin: 0;
+  margin: 0.9rem;
   flex-grow: 1;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -56,7 +71,14 @@ body {
   line-height: 1.4375rem;
 }
 .app_body .header--three_point {
-  margin: 0;
+  margin: 0.9rem;
+  font-size: 1.3rem;
+  writing-mode: vertical-rl;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+.app_body .header--three_point:hover {
+  cursor: pointer;
 }
 .app_body .main {
   grid-row: 1/2;
