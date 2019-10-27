@@ -1,13 +1,20 @@
-import bigArr from './assets/bigArray.js';
+//import bigArr from './assets/bigArray.js';
 //import smallArr from "./assets/smallArray.js";
-
+let img = new Image();
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 ctx.imageSmoothingEnabled = false;
+
 let canvasWH = 512;
 
 canvas.setAttribute('width', canvasWH);
 canvas.setAttribute('height', canvasWH);
+img.onload = function () {
+    ctx.drawImage(img, 0, 0, img.width * 2, img.height * 2);
+};
+
+img.src = './assets/img/image.png';
+
 
 // function drawPixel(arr) {
 //     let pixelWH = canvasWH / arr.length;
@@ -26,18 +33,21 @@ canvas.setAttribute('height', canvasWH);
 
 //drawPixel(smallArr);
 
-function drawRGBAPixel(arr) {
-    let pixelWH = canvasWH / arr.length;
-    let x = 0;
-    let y = 0;
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
-            ctx.fillStyle = `rgba(${arr[i][j]})`;
-            ctx.fillRect(x, y, pixelWH, pixelWH);
-            x += pixelWH;
-        }
-        y += pixelWH;
-        x = 0;
-    }
-}
-drawRGBAPixel(bigArr);
+// function drawRGBAPixel(arr) {
+//     let pixelWH = canvasWH / arr.length;
+//     let x = 0;
+//     let y = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         for (let j = 0; j < arr[i].length; j++) {
+//             ctx.fillStyle = `rgba(${arr[i][j]})`;
+//             ctx.fillRect(x, y, pixelWH, pixelWH);
+//             x += pixelWH;
+//         }
+//         y += pixelWH;
+//         x = 0;
+//     }
+// }
+// drawRGBAPixel(bigArr);
+
+
+ctx.drawImage(img, 0, 0, img.width * 2, img.height * 2);
