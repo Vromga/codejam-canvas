@@ -3,7 +3,7 @@ import bigArr from './assets/bigArray.js';
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
-
+ctx.imageSmoothingEnabled = false;
 let canvasWH = 512;
 
 canvas.setAttribute('width', canvasWH);
