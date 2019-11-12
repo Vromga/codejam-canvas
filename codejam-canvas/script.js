@@ -16,21 +16,21 @@ img.onload = function () {
 
 img.src = './assets/img/image.png';
 
-let chooseResolution = document.getElementsByName('resolution');
+let resolution = document.querySelector('.resolution');
 
-chooseResolution.forEach((value) => value.addEventListener('change', function () {
-    switch (this.value) {
+resolution.addEventListener('change', (event) => {
+    switch (event.target.value) {
         case '4x4':
             drawPixel(smallArr);
             break;
         case '32x32':
-            drawRGBAPixel(bigArr);
+            drawPixel(bigArr);
             break;
         case '256x256':
             ctx.drawImage(img, 0, 0, img.width * 2, img.height * 2);
             break;
     }
-}));
+});
 
 function drawPixel(arr) {
     let pixelWH = canvasWH / arr.length;
@@ -38,7 +38,11 @@ function drawPixel(arr) {
     let y = 0;
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[i].length; j++) {
-            ctx.fillStyle = `#${arr[i][j]}`;
+            if (Array.isArray(arr[i][j])) {
+                ctx.fillStyle = `rgba(${arr[i][j].join(',')})`;
+            } else {
+                ctx.fillStyle = `#${arr[i][j]}`;
+            }
             ctx.fillRect(x, y, pixelWH, pixelWH);
             x += pixelWH;
         }
@@ -47,18 +51,3 @@ function drawPixel(arr) {
     }
 }
 
-
-function drawRGBAPixel(arr) {
-    let pixelWH = canvasWH / arr.length;
-    let x = 0;
-    let y = 0;
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr[i].length; j++) {
-            ctx.fillStyle = `rgba(${arr[i][j]})`;
-            ctx.fillRect(x, y, pixelWH, pixelWH);
-            x += pixelWH;
-        }
-        y += pixelWH;
-        x = 0;
-    }
-}
